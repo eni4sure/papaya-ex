@@ -18,9 +18,13 @@
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/gallery/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 </head>
 
 <body>
+
+    <a class="github-fork-ribbon right-top" href="https://instagram.com/eni4sure" target="_blank" data-ribbon="Made by: @Eni4sure" title="Made with ❤ by Eniola" style="position: fixed;"></a>
+
     <section class="cid-s1gg5rtIig mbr-fullscreen mbr-parallax-background" id="header2-0">
         <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(35, 35, 35);"></div>
         <div class="container align-center">
@@ -139,28 +143,28 @@
                     <div class="mbr-gallery-layout-default">
                         <div>
                             <div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Awesome">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="0" data-toggle="modal"><img src="assets/images/gallery-1-1080x1284-800x951.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Responsive">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="1" data-toggle="modal"><img src="assets/images/gallery-2-1080x1080-800x800.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Creative">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="2" data-toggle="modal"><img src="assets/images/gallery-3-1080x1350-800x1000.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Animated">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="3" data-toggle="modal"><img src="assets/images/gallery-4-1080x1350-800x1000.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Awesome">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="4" data-toggle="modal"><img src="assets/images/gallery-6-1080x1080-800x800.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Awesome">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="5" data-toggle="modal"><img src="assets/images/gallery-5-1073x1334-800x995.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Responsive">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="6" data-toggle="modal"><img src="assets/images/gallery-7-1080x1080-800x800.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Animated">
+                                <div class="mbr-gallery-item mbr-gallery-item--p0" data-video-url="false" data-tags="Beauty">
                                     <div href="#lb-gallery3-7" data-slide-to="7" data-toggle="modal"><img src="assets/images/gallery-8-1080x1346-800x997.jpg" alt="" title=""><span class="icon-focus"></span></div>
                                 </div>
                             </div>
@@ -168,6 +172,18 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+
+                <div>
+                    <div class="mbr-gallery-layout-default">
+                        <div>
+                            <div>
+                                <div id="instagram_feed" style="margin-top: 45px;"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
                 <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery3-7">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -229,7 +245,28 @@
     <script src="assets/theme/js/script.js"></script>
     <script src="assets/slidervideo/script.js"></script>
     <script src="assets/gallery/player.min.js"></script>
-    <script src="assets/gallery/script.js"></script> <input name="animation" type="hidden">
+    <script src="assets/gallery/script.js"></script>
+    <script src="assets/igfeed/jquery.instagramFeed.min.js"></script>
+    <script>
+        (function($){
+            $(window).on('load', function(){
+                $.instagramFeed({
+                    // Hopefully she doesn't change her username and this will always work 🤓🤓 
+                    'username': 'papaya_ex',
+                    'container': "#instagram_feed",
+                    'display_profile': true,
+                    'display_biography': false,
+                    'display_gallery': true,
+                    'callback': null,
+                    'styling': true,
+                    'items': 12,
+                    'items_per_row': 3,
+                    'margin': 1 
+                });
+            });
+        })(jQuery);
+    </script>
+    <input name="animation" type="hidden">
 </body>
 
 </html>
